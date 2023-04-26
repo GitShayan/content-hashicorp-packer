@@ -1,8 +1,8 @@
 {
     "variables": {
-        "aws_access_key": "ACCESSKEY",
-        "aws_secret_key": "SECRETKEY",
-        "aws_subnet_id": "SUBNETID"
+        "aws_access_key": "AKIAQ4IGF7IIGQGHK4UF",
+        "aws_secret_key": "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",
+        "aws_subnet_id": "subnet-06e649cbfc7405f8c"
     },
     "builders": [
         {
@@ -28,6 +28,26 @@
                 }
             },
             "ssh_username": "ubuntu"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline": [
+                                "sudo apt-get update -y && sudo apt-get upgrade -y",
+                                "sudo mkdir /opt/provisioning",
+                                "sudo chown ubuntu:ubuntu /opt/provisioning"
+                                ]
+        },
+        {
+            "type": "shell",
+            "scripts": [
+                "scripts/init.sh",
+                "scripts/webdeploy.sh"
+            ],
+            "environment_vars": ["HOSTNAME=bookapp"],
+            "remote_folder": "/opt/provisioning",
+            "skip_clean": true
         }
     ]
 }
