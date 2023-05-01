@@ -34,9 +34,21 @@
         {
             "type": "shell",
             "inline": [
-                "sudo apt-get update -y && sudo apt-get upgrade -y"
+                "sudo apt-get update -y && sudo apt-get upgrade -y",
+                "sudo mkdir -p /var/www/html",
+                "sudo chown ubuntu:ubuntu /var/www/html"
             ]
         },
+                {
+                        "type": "file",
+                        "source": "files/bookapp",
+                        "destination": "/var/www/html"
+                },
+                {
+                        "type": "file",
+                        "source": "files/bookapp.conf",
+                        "destination": "/tmp/"
+                },
         {
             "type": "shell",
             "scripts": [
