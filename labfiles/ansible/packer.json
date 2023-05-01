@@ -38,6 +38,11 @@
                 "sudo apt-get update -y && sudo apt-get upgrade -y",
                 "sudo apt install python -y"
             ]
-        }
+        },
+        {
+                "type": "ansible",
+                "playbook_file": "/home/cloud_user/ansible/playbooks/website.yml",
+                "groups": ["web"]
+        }        
     ]
 }
