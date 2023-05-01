@@ -30,5 +30,21 @@
             "type": "shell",
             "inline": ["(cd /home/node/app; npm install)"]
         }
-    ]
+    ],
+    "post-processors": [
+    [
+        {
+          "type": "docker-tag",
+          "repository": "localhost:5000/packer",
+          "tag": "0.1"
+        },
+        "docker-push"
+    ],
+    [
+      {
+          "type": "docker-save",
+          "path": "dockerized-app.tar"
+      }
+    ]    
+]
 }
