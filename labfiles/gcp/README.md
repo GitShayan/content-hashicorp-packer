@@ -3,7 +3,7 @@ Packer allows us to use JSON or HCL code to describe and generate machine images
 In this lab, we'll explore using Packer with GCP, including credential creation, 
 before writing our build from scratch to save an image of a web instance.
 
-#Solution
+## Solution
 On the lab page, right-click Open Google Console and select the option to open it in a new private browser window
 (this option will read differently depending on your browser — e.g., in Chrome, it says "Open Link in Incognito Window"). 
 Then, sign in to Google Cloud Platform using the credentials provided on the lab page.
@@ -12,7 +12,7 @@ On the Welcome to your new account screen, review the text, and click Accept.
 In the "Welcome Cloud Student!" pop-up once you're signed in, check to agree to the terms of service,
 choose your country of residence, and click Agree and Continue.
 
-#Access the Console, Create Credentials, and Pull Down Files
+## Access the Console, Create Credentials, and Pull Down Files
 
 
 1. Copy the project ID at the top of the page, and paste it into a text file. We'll need it later on.
