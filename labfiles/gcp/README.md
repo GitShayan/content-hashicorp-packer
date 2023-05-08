@@ -1,4 +1,4 @@
-#Introduction
+##Introduction
 Packer allows us to use JSON or HCL code to describe and generate machine images, such as Google Compute images. 
 In this lab, we'll explore using Packer with GCP, including credential creation, 
 before writing our build from scratch to save an image of a web instance.
