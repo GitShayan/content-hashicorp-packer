@@ -1,0 +1,21 @@
+{
+    "builders": [
+        {
+            "type": "lxd",
+            "image": "ubuntu:focal",
+            "name": "lxd-booksite",
+            "init_sleep": "30"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "website/",
+            "destination": "/var/www/html/"
+        },
+        {
+            "type": "shell",
+            "script": "deploy.sh"
+        }
+    ]
+}
